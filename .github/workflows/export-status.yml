@@ -7,16 +7,20 @@ on:
       - 'status_log.db'
   workflow_dispatch:
 
+# Grants write permissions so the workflow can push changes back to the repo
+permissions:
+  contents: write
+
 jobs:
   export:
     runs-on: ubuntu-latest
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4  # Updated from v3
       
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5  # Updated from v4
       with:
         python-version: '3.10'
     
@@ -26,6 +30,6 @@ jobs:
     - name: Commit and push if changed
       run: |
         git config --global user.name 'GitHub Actions Bot'
-        git config --global user.email 'actions@github.com'
+        git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
         git add statuses.json
         git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update statuses.json" && git push)
