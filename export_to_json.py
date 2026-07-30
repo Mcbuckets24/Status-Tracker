@@ -10,7 +10,7 @@ conn = sqlite3.connect(db_path)
 cursor = conn.cursor()
 
 # Fetch all statuses and timestamps
-cursor.execute("SELECT status, timestamp FROM status_log ORDER BY id DESC")
+cursor.execute("SELECT status, timestamp FROM status_log ORDER BY timestamp DESC")
 statuses = [{"status": row[0], "timestamp": row[1]} for row in cursor.fetchall()]
 
 conn.close()
