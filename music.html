@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Interests</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/hxi4phm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="page-wrapper">
+  <div class="header-frame">
+    <div class="header-box">
+        <img src="images/music_banner.png" alt="Personal Avatar " class="banner" >
+    </div>
+</div>
+
+
+    <div class = "cd-wrapper">
+        <img src="images/cd_spin.gif" alt="CD" class="cd-image">
+    </div>
+<div class="credits"><p><a href="credits.html">Credits</a></p></div>
+
+
+<div class="info-box">
+
+        <div class="ticker-wrapper">
+            <div class="ticker">
+
+                <!-- messages -->
+                <span class="ticker-item">Current Top Artist: Kendrick Lamar</span>
+                <span class="ticker-item">Current Top Song: Smo' - Heart to Gold</span>
+                <span class="ticker-item">Current Top Album: To Pimp A Butterfly</span>
+                <span class="ticker-item">Genre Focus: Midwest Emo</span>
+
+                <!-- Duplicate for loop -->
+                <span class="ticker-item">Current Top Artist: Kendrick Lamar</span>
+                <span class="ticker-item">Current Top Song: Smo' - Heart to Gold</span>
+                <span class="ticker-item">Current Top Album: To Pimp A Butterfly</span>
+                <span class="ticker-item">Genre Focus: Midwest Emo</span>
+            </div>
+        </div>
+
+
+        <div class="monitor-container">
+            <a href="https://tenor.com/view/fishmans-fishtank-concert-shinji-sato-shinji-gif-22657889" target="_blank"><img
+                    src="images/fishmans-fishtank.gif" alt="Fishmans' Shinji Sato" class="monitor-screen"></a>
+            <img src="images/crt.png" alt="Monitor frame" class="monitor-frame">
+        </div>
+
+        <img src="images/filing-cabinet1.png" alt="filing cabinet" class="cabinet-image">
+
+
+        <div class="about-frame">
+            <img src="images/ms_paint.png" alt="ms paint frame" class="paint-frame">
+            <!--minimize clickable--><div class="minimize"></div>
+            <div class="about-text-frame">
+                <p class="about-text">If you ever find me in the wild, it's almost a guarantee I'll have my headphones on. Music is the background
+                    to quite literally everything I do. I think music expresses the human experience better than anything else. Whether it's the
+                    greatest or worst day of your life, there's a song that can make you feel understood. That's why I love it. Interests, for me,
+                    lie all over the place like any other music fan, but I think I can boil it down to something like this: Hip Hop, Midwest Emo,
+                    Indie J-Rock, Psychedelia, Jazz (fusion), Soul, and anything that my brain happens to enjoy. My favorite artists are Fishmans,
+                    Kendrick Lamar, and Harrison Gordon. My favorite album is 98.12.28 Otokutachi no Wakare by Fishmans. I'm always open to recommendations
+                    and honestly feel like I've barely scratched the surface of the music scene, so I'd love to chat about whoever your favorite
+                    artist might be!
+                </p>
+            </div>
+        </div>
+
+        <div class="minimized-paint-frame">
+            <img src="images/min-paint.png" alt="minimized ms paint frame" class="minimized-paint">
+        </div>
+
+
+        <div class="album-grid-container">
+            <img src="images/album-grid.png" alt="album grid frame" class="album-grid-frame">
+        </div>
+
+            <div class="wrestling-box">
+                <p class="wrestling-text"><a href="Pro_wrestling.html">Pro Wrestling</a></p>
+            </div>
+
+            <div class="music-box">
+                <p class="music-text"><a href="music.html">Music</a></p>
+            </div>
+
+            <div class="manga-box">
+                <p class="manga-text"><a href="manga.html">Manga</a></p>
+            </div>
+
+            <div class="video-games-box">
+                <p class="video-games-text"><a href="video_games.html">Video Games</a></p>
+            </div>
+
+
+
+        <!-- Drawers -->
+        <a href="about.html">
+            <div class="drawer-one"></div>
+        </a>
+
+        <a href="music.html">
+            <div class="drawer-two"></div>
+        </a>
+
+
+
+
+        <nav class="nav-menu">
+        <div class="nav-box">
+            <img src="images/home_nav.png" alt="Home icon" class="nav-icon-home">
+            <p class="nav-text-home"><a href="neocities_cite.html">Home</a></p>
+
+            <img src="images/me_nav.png" alt="Me icon" class="nav-icon-me">
+            <p class="nav-text-me"><a href="about.html">Me?!</a></p>
+
+            <img src="images/videos_nav.png" alt="Videos icon" class="nav-icon-videos">
+            <p class="nav-text-videos">Videos</p>
+
+            <img src="images/essay_nav.png" alt="Essays icon" class="nav-icon-essays">
+            <p class="nav-text-essays">Essays</p>
+
+            <img src="images/status_nav.png" alt="Status icon" class="nav-icon-status">
+             <p class="nav-text-status"><a href="status.html">Status</a></p>
+        </div>
+    </nav>
+
+    <!-- Current Satus -->
+    <div class="status-frame">
+        <div class="status-box">
+            <h3 class="status-title">Current Status:</h3>
+            <p class="status-text" id="statusText">Loading...</p>
+        </div>
+    </div>
+    </div>
+  </div>
+<script>
+    async function loadLatestStatus() {
+    try {
+        // Replace with your actual GitHub raw URL
+        const response = await fetch('https://raw.githubusercontent.com/Mcbuckets24/Status-Tracker/main/statuses.json?' + Date.now());
+        const statuses = await response.json();
+
+        if (statuses.length > 0) {
+            const latest = statuses[0]; // First item is most recent
+
+            document.getElementById('statusText').textContent = latest.status;
+
+            //const timestamp = new Date(latest.timestamp);
+            //document.getElementById('statusTimestamp').textContent =
+                //`Updated: ${timestamp.toLocaleDateString()} ${timestamp.toLocaleTimeString()}`;
+        }
+    } catch (error) {
+        console.error('Error loading status:', error);
+        document.getElementById('statusText').textContent = 'Failed to load status';
+    }
+}
+
+loadLatestStatus();
+// Auto-refresh every 5 minutes
+setInterval(loadLatestStatus, 300000);
+
+
+
+// Minimize about frame on click
+document.querySelector('.minimize').addEventListener('click', function() {
+    const aboutFrame = document.querySelector('.about-frame');
+    const minimizedFrame = document.querySelector('.minimized-paint-frame');
+    const albumGrid = document.querySelector('.album-grid-container');
+
+    // Add minimize animation class
+    aboutFrame.classList.add('minimizing');
+
+    // After animation completes, show minimized version
+    setTimeout(() => {
+        aboutFrame.style.display = 'none';
+        minimizedFrame.style.display = 'block';
+        albumGrid.style.display = 'block';
+    }, 300); // Match animation duration
+});
+
+// Click minimized frame to restore
+document.querySelector('.minimized-paint-frame').addEventListener('click', function() {
+    const aboutFrame = document.querySelector('.about-frame');
+    const minimizedFrame = document.querySelector('.minimized-paint-frame');
+    const albumGrid = document.querySelector('.album-grid-container');
+
+    // Hide minimized elements
+    minimizedFrame.style.display = 'none';
+    albumGrid.style.display = 'none';
+
+    // Show and animate about frame back
+    aboutFrame.style.display = 'block';
+    aboutFrame.classList.remove('minimizing');
+    aboutFrame.classList.add('restoring');
+
+    setTimeout(() => {
+        aboutFrame.classList.remove('restoring');
+    }, 300);
+});
+
+</script>
+</body>
+
+
+</html>

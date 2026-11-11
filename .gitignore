@@ -1,0 +1,5 @@
+status_logger_bot.py 
+*.py 
+status_log.db 
+.idea/ 
+*.bat 
